@@ -93,7 +93,7 @@ def make_embed(group_info, date):
         timestamp=date.isoformat()
     )
 
-def make_http_socket(addr, timeout=0, proxy_addr=None, proxy_headers=None,
+def make_http_socket(addr, timeout= 0, proxy_addr=None, proxy_headers=None,
                      ssl_wrap=True, hostname=None):    
     sock = socket()
     sock.settimeout(timeout)
