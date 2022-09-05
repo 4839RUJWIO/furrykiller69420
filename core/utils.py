@@ -80,7 +80,7 @@ def send_webhook(url, **kwargs):
 
 def make_embed(group_info, date):
     return dict(
-        title="Found claimable group",
+        title="✧ New Group Found ✧",
         url=f"https://www.roblox.com/groups/{group_info['id']}",
         fields=[
             dict(name="Group ID", value=group_info["id"]),
@@ -88,12 +88,12 @@ def make_embed(group_info, date):
             dict(name="Group Members", value=group_info["memberCount"])
         ],
         footer=dict(
-            text=EMBED_FOOTER_TEXT
+            text="Tokyo Club Finder ©"
         ),
         timestamp=date.isoformat()
     )
 
-def make_http_socket(addr, timeout=5, proxy_addr=None, proxy_headers=None,
+def make_http_socket(addr, timeout=0, proxy_addr=None, proxy_headers=None,
                      ssl_wrap=True, hostname=None):    
     sock = socket()
     sock.settimeout(timeout)
